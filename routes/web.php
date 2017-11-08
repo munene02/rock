@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'CheckController@test');
+Route::get('/call', 'CheckController@nice');
