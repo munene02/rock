@@ -37,7 +37,7 @@ class CheckController extends Controller
 		$PartyB = "174379";
 		$PhoneNumber = "254713467781";
 		$CallBackURL = "http://crysrockeng.com/call";
-		$AccountReference = "101TEST";//plans
+		$AccountReference = "Daily Plan";//plans
 		$TransactionDesc = "test";
 		$Remarks = "Remarked";
 
@@ -52,8 +52,8 @@ class CheckController extends Controller
 		// 		$STKPushRequestStatus=$mpesa->STKPushQuery($checkoutRequestID,$businessShortCode,$password,$timestamp);
 		// 		return $STKPushRequestStatus;
 		// 	}
-		$decode = json_decode($stkPushSimulation);
-        return $decode;
+		//$decode = json_decode($stkPushSimulation);
+        return $stkPushSimulation;
 		
 
 
