@@ -13,21 +13,11 @@ class CheckController extends Controller
 
     	//Validation
 
-		// $mpesa= new \Mossey\Mpesa\Mpesa();
-
-		// $b2bTransaction=$mpesa->validate();
-
-		// //Confirmation
-
-		// $mpesa= new \Mossey\Mpesa\Mpesa();
-
-		// $b2bTransaction=$mpesa->confirm();
-
-		//Account balance
-
 		$mpesa= new \Mossey\Mpesa\Mpesa();
 
-		// $balanceInquiry=$mpesa->accountBalance($CommandID, $Initiator, $SecurityCredential, $PartyA, $IdentifierType, $Remarks, $QueueTimeOutURL, $ResultURL);
+		$b2bTransaction=$mpesa->validate();
+
+		$b2bTransaction=$mpesa->confirm();
 
 		$BusinessShortCode = "174379";
 		$LipaNaMpesaPasskey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
@@ -44,8 +34,8 @@ class CheckController extends Controller
 		$stkPushSimulation = $mpesa->STKPushSimulation($BusinessShortCode, $LipaNaMpesaPasskey, $TransactionType, $Amount, $PartyA, $PartyB, $PhoneNumber, $CallBackURL, $AccountReference, $TransactionDesc, $Remarks);
 
 		//$checkoutRequestID = $stkPushSimulation.CheckoutRequestID;
-		$timestamp='20'.date("ymdhis");
-        $password=base64_encode('password');
+		// $timestamp='20'.date("ymdhis");
+  //       $password=base64_encode('password');
 
 		// if($stkPushSimulation->isEmpty()){return 'Empty';}
 		// 	else{
