@@ -27,13 +27,13 @@ class CheckController extends Controller
 		$PartyB = "174379";
 		$PhoneNumber = "254713467781";
 		$CallBackURL = "http://crysrockeng.com/call";
-		$AccountReference = " 350 Daily Plan";//plans
+		$AccountReference = "350 Daily Plan";//plans
 		$TransactionDesc = "test";
 		$Remarks = "Remarked";
 
 		$stkPushSimulation = $mpesa->STKPushSimulation($BusinessShortCode, $LipaNaMpesaPasskey, $TransactionType, $Amount, $PartyA, $PartyB, $PhoneNumber, $CallBackURL, $AccountReference, $TransactionDesc, $Remarks);
 
-		//$checkoutRequestID = $stkPushSimulation->CheckoutRequestID;
+		$id = $stkPushSimulation.CheckoutRequestID;
 		// $timestamp='20'.date("ymdhis");
   //       $password=base64_encode('password');
 
@@ -44,7 +44,7 @@ class CheckController extends Controller
 		// 	}
 		//$decode = json_decode($stkPushSimulation);
         //return $decode;
-        return $stkPushSimulation;
+        return $id;
 		
 
 
