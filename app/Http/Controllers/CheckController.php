@@ -42,8 +42,8 @@ class CheckController extends Controller
 		// 		$STKPushRequestStatus=$mpesa->STKPushQuery($checkoutRequestID,$businessShortCode,$password,$timestamp);
 		// 		return $STKPushRequestStatus;
 		// 	}
-		$decode = json_decode($stkPushSimulation);
-        return $decode;
+		//$decode = json_decode($stkPushSimulation);
+        //return $decode;
         return $stkPushSimulation;
 		
 
