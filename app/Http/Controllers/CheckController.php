@@ -37,16 +37,18 @@ class CheckController extends Controller
 		$PartyB = "174379";
 		$PhoneNumber = "254713467781";
 		$CallBackURL = "http://crysrockeng.com/call";
-		$AccountReference = "101TEST";
+		$AccountReference = "101TEST";//plans
 		$TransactionDesc = "test";
 		$Remarks = "Remarked";
 
 		$stkPushSimulation = $mpesa->STKPushSimulation($BusinessShortCode, $LipaNaMpesaPasskey, $TransactionType, $Amount, $PartyA, $PartyB, $PhoneNumber, $CallBackURL, $AccountReference, $TransactionDesc, $Remarks);
 
+		return $stkPushSimulation;
+
     }
 
     public function nice(Request $request)
     {
-    	return $request->all();
+    	dd('amigo');
     }
 }
