@@ -47,12 +47,12 @@ class CheckController extends Controller
 		$timestamp='20'.date("ymdhis");
         $password=base64_encode('password');
 
-		if($stkPushSimulation->isEmpty()){return 'Empty';}
-			else{
-				$STKPushRequestStatus=$mpesa->STKPushQuery($checkoutRequestID,$businessShortCode,$password,$timestamp);
-				return $STKPushRequestStatus;
-			}
-
+		// if($stkPushSimulation->isEmpty()){return 'Empty';}
+		// 	else{
+		// 		$STKPushRequestStatus=$mpesa->STKPushQuery($checkoutRequestID,$businessShortCode,$password,$timestamp);
+		// 		return $STKPushRequestStatus;
+		// 	}
+        return $checkoutRequestID;
 		
 
 
