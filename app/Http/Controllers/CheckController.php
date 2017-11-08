@@ -33,7 +33,7 @@ class CheckController extends Controller
 
 		$stkPushSimulation = $mpesa->STKPushSimulation($BusinessShortCode, $LipaNaMpesaPasskey, $TransactionType, $Amount, $PartyA, $PartyB, $PhoneNumber, $CallBackURL, $AccountReference, $TransactionDesc, $Remarks);
 
-		$checkoutRequestID = $stkPushSimulation->CheckoutRequestID;
+		//$checkoutRequestID = $stkPushSimulation->CheckoutRequestID;
 		// $timestamp='20'.date("ymdhis");
   //       $password=base64_encode('password');
 
@@ -42,8 +42,8 @@ class CheckController extends Controller
 		// 		$STKPushRequestStatus=$mpesa->STKPushQuery($checkoutRequestID,$businessShortCode,$password,$timestamp);
 		// 		return $STKPushRequestStatus;
 		// 	}
-		//$decode = json_decode($stkPushSimulation);
-        //return $stkPushSimulation;
+		$decode = json_decode($stkPushSimulation);
+        return $decode;
         return $stkPushSimulation;
 		
 
