@@ -43,9 +43,9 @@ class CheckController extends Controller
 		// 		return $STKPushRequestStatus;
 		// 	}
 		$decode = json_decode($stkPushSimulation, true);
-		//$id = $stkPushSimulation['CheckoutRequestID'];
+		$id = $stkPushSimulation[0];
         //return $decode;
-        //return $id;
+        return $id;
 
         var_dump($decode);
         //var_dump($stkPushSimulation);
