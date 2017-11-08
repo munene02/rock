@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use Safaricom\
+use App\Http\Requests;
 
 class CheckController extends Controller
 {
@@ -45,8 +45,8 @@ class CheckController extends Controller
 
     }
 
-    public function nice()
+    public function nice(Request $request)
     {
-    	dd('amigo');
+    	return $request->all();
     }
 }
