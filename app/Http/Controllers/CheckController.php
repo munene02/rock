@@ -48,7 +48,7 @@ class CheckController extends Controller
         //return $id;
 
         var_dump($decode);
-        var_dump($stkPushSimulation);
+        //var_dump($stkPushSimulation);
 		
 
 
